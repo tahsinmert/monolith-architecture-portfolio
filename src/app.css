@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply the Brutalist Font globally */
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #808080;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Grid Background Pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, var(--color-gray) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-gray) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-white);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+.cursor.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Brutalist Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}
+
+/* Grid Borders */
+.grid-border {
+  border-right: 2px solid var(--color-black);
+  border-bottom: 2px solid var(--color-black);
+}
+
+/* Smooth Scroll Container */
+.smooth-scroll {
+  overflow: hidden;
+}
+
+/* Text Stroke for Project Titles */
+.text-stroke-black {
+  -webkit-text-stroke: 2px #000;
+  text-stroke: 2px #000;
+  paint-order: stroke fill;
+}
