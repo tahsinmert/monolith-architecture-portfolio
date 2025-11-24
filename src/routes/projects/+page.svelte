@@ -127,7 +127,7 @@
     <div class="space-y-0">
       {#each projects as project}
         <a
-          href="/project/{project.id}"
+          href="/projects/{project.id}"
           class="block border-b-2 border-black hover:bg-gray-100 transition-colors"
           onmouseenter={() => handleProjectHover(project)}
           onmouseleave={handleProjectLeave}

@@ -1,5 +1,15 @@
 import type { PageLoad } from './$types';
 
+export const entries = async () => {
+	return [
+		{ id: '1' },
+		{ id: '2' },
+		{ id: '3' },
+		{ id: '4' },
+		{ id: '5' }
+	];
+};
+
 export const load: PageLoad = ({ params }) => {
   // Mock project data
   const projects: Record<string, any> = {
