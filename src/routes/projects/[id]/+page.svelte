@@ -10,7 +10,7 @@
   }
 
   let { data } = $props();
-  $: project = data.project;
+  let project = $derived(data.project);
 
   let leftPanel: HTMLElement | null = $state(null);
   let gallery: HTMLElement | null = $state(null);
@@ -65,7 +65,7 @@
       <!-- Back Button -->
       <a
         href="/projects"
-        on:click={(e) => {
+        onclick={(e) => {
           e.preventDefault();
           goBack();
         }}
@@ -125,7 +125,7 @@
       <div class="border-t-4 border-black">
         <a
           href="/projects/{project.nextProjectId}"
-          on:click={(e) => {
+          onclick={(e) => {
             e.preventDefault();
             goToNext();
           }}

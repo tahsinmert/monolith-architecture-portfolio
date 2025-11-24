@@ -187,8 +187,11 @@
     <div 
       data-project-card
       data-project-id={projects[0].id}
+      role="button"
+      tabindex="0"
       class="col-span-8 border-2 border-black aspect-video relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[0], e)}
+      onclick={(e) => handleProjectClick(projects[0], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[0], e as any)}
       data-hover
     >
       <img 
@@ -207,8 +210,11 @@
     <div 
       data-project-card
       data-project-id={projects[1].id}
+      role="button"
+      tabindex="0"
       class="col-start-9 col-span-4 border-2 border-black aspect-video relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[1], e)}
+      onclick={(e) => handleProjectClick(projects[1], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[1], e as any)}
       data-hover
     >
       <img 
@@ -227,8 +233,11 @@
     <div 
       data-project-card
       data-project-id={projects[2].id}
+      role="button"
+      tabindex="0"
       class="col-span-5 row-span-2 border-2 border-black aspect-[5/8] relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[2], e)}
+      onclick={(e) => handleProjectClick(projects[2], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[2], e as any)}
       data-hover
     >
       <img 
@@ -247,8 +256,11 @@
     <div 
       data-project-card
       data-project-id={projects[3].id}
+      role="button"
+      tabindex="0"
       class="col-start-6 col-span-7 border-2 border-black aspect-video relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[3], e)}
+      onclick={(e) => handleProjectClick(projects[3], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[3], e as any)}
       data-hover
     >
       <img 
@@ -267,8 +279,11 @@
     <div 
       data-project-card
       data-project-id={projects[4].id}
+      role="button"
+      tabindex="0"
       class="col-start-3 col-span-10 border-2 border-black aspect-video relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[4], e)}
+      onclick={(e) => handleProjectClick(projects[4], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[4], e as any)}
       data-hover
     >
       <img 
@@ -287,8 +302,11 @@
     <div 
       data-project-card
       data-project-id={projects[5].id}
+      role="button"
+      tabindex="0"
       class="col-span-6 border-2 border-black aspect-video relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[5], e)}
+      onclick={(e) => handleProjectClick(projects[5], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[5], e as any)}
       data-hover
     >
       <img 
@@ -307,8 +325,11 @@
     <div 
       data-project-card
       data-project-id={projects[6].id}
+      role="button"
+      tabindex="0"
       class="col-span-6 border-2 border-black aspect-video relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[6], e)}
+      onclick={(e) => handleProjectClick(projects[6], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[6], e as any)}
       data-hover
     >
       <img 
@@ -327,8 +348,11 @@
     <div 
       data-project-card
       data-project-id={projects[7].id}
+      role="button"
+      tabindex="0"
       class="col-span-8 border-2 border-black aspect-video relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[7], e)}
+      onclick={(e) => handleProjectClick(projects[7], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[7], e as any)}
       data-hover
     >
       <img 
@@ -347,8 +371,11 @@
     <div 
       data-project-card
       data-project-id={projects[8].id}
+      role="button"
+      tabindex="0"
       class="col-span-4 border-2 border-black aspect-video relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[8], e)}
+      onclick={(e) => handleProjectClick(projects[8], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[8], e as any)}
       data-hover
     >
       <img 
@@ -367,8 +394,11 @@
     <div 
       data-project-card
       data-project-id={projects[9].id}
+      role="button"
+      tabindex="0"
       class="col-span-12 border-2 border-black aspect-video relative group overflow-hidden cursor-pointer"
-      on:click={(e) => handleProjectClick(projects[9], e)}
+      onclick={(e) => handleProjectClick(projects[9], e)}
+      onkeydown={(e) => e.key === 'Enter' && handleProjectClick(projects[9], e as any)}
       data-hover
     >
       <img 
@@ -389,8 +419,11 @@
 {#if modalOpen && selectedProject}
   <div
     data-project-modal
+    role="button"
+    tabindex="0"
     class="fixed inset-0 z-[100] bg-black flex items-center justify-center overflow-hidden cursor-pointer"
-    on:click={closeModal}
+    onclick={closeModal}
+    onkeydown={(e) => e.key === 'Enter' && closeModal()}
   >
     <div class="relative w-full h-full flex items-center justify-center">
       <img 
@@ -399,7 +432,7 @@
         class="w-full h-full object-contain"
       />
       <button
-        on:click={(e) => {
+        onclick={(e) => {
           e.stopPropagation();
           closeModal();
         }}

@@ -129,8 +129,8 @@
         <a
           href="/project/{project.id}"
           class="block border-b-2 border-black hover:bg-gray-100 transition-colors"
-          on:mouseenter={() => handleProjectHover(project)}
-          on:mouseleave={handleProjectLeave}
+          onmouseenter={() => handleProjectHover(project)}
+          onmouseleave={handleProjectLeave}
           data-hover
         >
           <div class="grid grid-cols-12 gap-4 py-8 items-center">
